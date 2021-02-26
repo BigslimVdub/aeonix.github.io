@@ -1,6 +1,9 @@
 <div id="banner" class="bg-blur">
     <div id="header">
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      {% if site.content.announce[page.lang] And site.content.announce[page.lang] != "" And site.content.announce[page.lang] != nil %}
+        <div class="announce"><a href="https://github.com/aeonix/aeon-gui/releases/tag/v0.14.1.0-aeon">{{ site.content.announce[page.lang] }}</a></div>
+      {% endif %}
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -21,7 +24,6 @@
               <li><a href="#difference">{{ site.menu.difference[page.lang] }}</a></li>
               <li><a href="#downloads">{{ site.menu.download[page.lang] }}</a></li>
               <li><a href="#presskit">{{ site.menu.pressKit[page.lang] }}</a></li>
-              <li><a href="https://www.aeonfunding.com">{{ site.menu.funding[page.lang] }}</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ site.menu.lang[page.lang] }} <span class="caret"></span></a>
                 <div class="dropdown-menu dropdown-menu-right">
@@ -31,10 +33,11 @@
                     <a href="/index.de">Deutsch</a>
                     <a href="/index.pl">Polski</a>
                     <a href="/index.eo">Esperanto</a>
+                    <a href="/index.fr">Française</a>
                     <a href="/index.rs">русский</a>
                     <a href="/index.cn">中文</a>
                   </div>
-                </ul>
+                </div>
               </li>
             </ul>
           </div>
